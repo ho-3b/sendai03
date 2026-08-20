@@ -10,10 +10,14 @@
 <meta property="og:site_name" content="仙台Ruby会議03">
 <meta property="og:title" content="仙台Ruby会議03">
 <meta property="og:description" content="仙台Ruby会議03は、2026年11月21日に開催する地域Ruby会議です。今回は「rubyist.send(:❤️)」をテーマとし、Rubyの楽しさが伝わるような発表を募集しています。">
+<meta property="og:image" content="https://regional.rubykaigi.org/sendai03/assets/img/ogp.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="仙台Ruby会議03">
 <meta name="twitter:description" content="仙台Ruby会議03は、2026年11月21日に開催する地域Ruby会議です。今回は「rubyist.send(:❤️)」をテーマとし、Rubyの楽しさが伝わるような発表を募集しています。">
+<meta name="twitter:image" content="https://regional.rubykaigi.org/sendai03/assets/img/ogp.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700;900&family=Source+Code+Pro:wght@700;900&display=swap" rel="stylesheet">
@@ -40,6 +44,7 @@
         <!--
         <li class="list__inactive"><a href="#">仙台グルメ</a></li>
         -->
+        <li class="site-nav__item--icon"><a class="site-nav__note" href="https://note.com/sendairk03/m/m360bca05e57b" target="_blank" rel="noopener noreferrer" aria-label="仙台Ruby会議#03 公式note（別タブで開く）"><img src="assets/img/icons/note.svg" alt="" width="34" height="34" aria-hidden="true"></a></li>
       </ul>
     </nav>
     <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-menu">
@@ -61,6 +66,7 @@
       <!--
       <li class="mobile-menu__item"><a href="#">仙台グルメ</a></li>
       -->
+      <li class="mobile-menu__item mobile-menu__item--note"><a href="https://note.com/sendairk03/m/m360bca05e57b" target="_blank" rel="noopener noreferrer"><img src="assets/img/icons/note.svg" alt="" width="28" height="28" aria-hidden="true">仙台Ruby会議#03 公式note</a></li>
     </ul>
   </nav>
 </div>
@@ -108,21 +114,20 @@
 
       <ul class="news-list">
         <li><time datetime="2026-07-02">2026/07/02</time> <a href="https://docs.google.com/forms/d/e/1FAIpQLScvsWJ_KKlg8jzR5QeXEd-u9BwsUBp4pYIAK3WpufssoJyeOQ/viewform?usp=header" target="_blank" rel="noopener noreferrer">CFPの募集</a>を開始しました</li>
-        <li><time datetime="2026-05-08">2026/05/08</time> <a href="https://forms.gle/KbChoy4L6a4SaeCH8" target="_blank" rel="noopener noreferrer">スポンサー募集</a>を開始しました</li>
+        <li><time datetime="2026-05-08">2026/05/08</time> スポンサー募集を開始しました</li>
         <li><time datetime="2026-04-28">2026/04/28</time> <a href="documents/sponsorship_requirements.pdf" target="_blank" rel="noopener noreferrer">スポンサー募集要項</a>を更新しました</li>
         <li><time datetime="2026-04-16">2026/04/16</time> <a href="documents/sponsorship_requirements.pdf" target="_blank" rel="noopener noreferrer">スポンサー募集要項</a>を公開しました</li>
       </ul>
 
       <div class="cards">
-        <article class="card card--primary">
-          <span class="badge badge--primary">受付中</span>
+        <article class="card card--inactive">
+          <span class="badge badge--neutral">受付終了</span>
           <h3 class="card__title">スポンサー募集<br><span class="card__title-en">Call for Sponsors</span></h3>
           <p class="card__text">カンファレンスを一緒につくるパートナーを募集中。一緒に仙台とRubyを盛り上げませんか？</p>
-          <p class="card__meta"><img src="assets/img/icons/calendar.svg" alt="" width="13" height="14" aria-hidden="true">申込締切 <span>2026/08/07(金)</span></p>
-          <a class="card__cta card__cta--active" href="#sponsors">
-            <span>申し込む</span>
-           <span class="card__cta-circle" aria-hidden="true"><svg width="6" height="10" viewBox="0 0 6 10" fill="none"><path d="M1 1l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          </a>
+          <p class="card__footer-row">
+            <span class="card__status">受付を終了しました</span>
+            <span class="card__cta-circle card__cta-circle--outline" aria-hidden="true"><svg width="6" height="10" viewBox="0 0 6 10" fill="none"><path d="M1 1l4 4-4 4" stroke="#4d4d4d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </p>
         </article>
 
         <article class="card card--primary">
@@ -234,6 +239,8 @@
     </div>
   </section>
 
+  <!--
+  スポンサーロゴが確定次第、以下のセクションを再度表示する
   <section id="sponsors" class="sponsors">
     <div class="container">
       <p class="section-label">SPONSORS</p>
@@ -248,7 +255,6 @@
         <p class="sponsors-deadline__date">2026年8月7日<span class="sponsors-deadline__date-day">（金）</span></p>
       </div>
 
-      <!--
       <div class="sponsor-tier">
         <div class="sponsor-tier__heading">
           <span class="sponsor-tier__label sponsor-tier__label--gold">GOLD</span>
@@ -271,7 +277,6 @@
           <div class="sponsor-logo">Your Logo</div>
         </div>
       </div>
-      -->
 
       <div class="sponsors-cta-group">
         <a class="sponsors-cta" href="documents/sponsorship_requirements.pdf" target="_blank" rel="noopener noreferrer">
@@ -284,6 +289,7 @@
       </div>
     </div>
   </section>
+  -->
 
 </main>
 
