@@ -838,11 +838,12 @@ section {
 
 .sponsor-card__logo-frame {
   flex-shrink: 0;
-  width: 140px;
+  width: 160px;
   height: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 12px;
   border-radius: 10px;
   background: rgba(20, 20, 24, 0.02);
   overflow: hidden;
@@ -852,16 +853,6 @@ section {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-}
-
-.sponsor-card__logo-placeholder {
-  padding: 8px;
-  text-align: center;
-  font-family: var(--font-label);
-  font-weight: 600;
-  font-size: 0.8125rem;
-  line-height: 1.5;
-  color: #8c8c8c;
 }
 
 .sponsor-card__body {
@@ -1311,7 +1302,7 @@ section {
   }
   .sponsor-card__logo-frame {
     align-self: center;
-    width: 120px;
+    width: 200px;
     height: 120px;
   }
 
