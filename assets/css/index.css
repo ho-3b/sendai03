@@ -827,7 +827,7 @@ section {
 
 .sponsor-card {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 28px;
   padding: 24px;
   background: #fff;
@@ -838,14 +838,14 @@ section {
 
 .sponsor-card__logo-frame {
   flex-shrink: 0;
-  width: 160px;
+  width: 140px;
   height: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 12px;
   border-radius: 10px;
-  background: rgba(20, 20, 24, 0.02);
+  background: transparent;
   overflow: hidden;
 }
 
@@ -1302,8 +1302,8 @@ section {
   }
   .sponsor-card__logo-frame {
     align-self: center;
-    width: 200px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
   }
 
   /* Header */
