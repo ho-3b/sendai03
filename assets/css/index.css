@@ -684,32 +684,24 @@ section {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
 }
 
 .timetable-row {
   display: grid;
   grid-template-columns: 208px 1fr;
   gap: 0;
-  align-items: stretch;
+  align-items: center;
 }
 
 .timetable-row__time {
-  display: flex;
-  align-items: center;
-  padding: 30px 26px;
+  padding: 0 26px 0 0;
   font-family: var(--font-label);
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 1.25;
   color: #161616;
-}
-
-.timetable-row__sessions {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  min-width: 0;
+  white-space: nowrap;
 }
 
 .timetable-session {
