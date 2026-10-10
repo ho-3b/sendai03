@@ -689,24 +689,26 @@ section {
 
 .timetable-row {
   display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 24px;
-  align-items: start;
+  grid-template-columns: 208px 1fr;
+  gap: 0;
+  align-items: stretch;
 }
 
 .timetable-row__time {
-  padding-top: 4px;
-  font-family: var(--font-head);
-  font-weight: 800;
-  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  padding: 30px 26px;
+  font-family: var(--font-label);
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.25;
   color: #161616;
-  text-align: right;
 }
 
 .timetable-row__sessions {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
   min-width: 0;
 }
 
@@ -714,8 +716,8 @@ section {
   position: relative;
   background: #fff;
   border: 1px solid var(--color-border);
-  border-radius: 14px;
-  padding: 20px 24px;
+  border-radius: 16px;
+  padding: 24px 32px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
@@ -723,10 +725,11 @@ section {
   display: inline-block;
   font-family: var(--font-label);
   font-weight: 700;
-  font-size: 0.6875rem;
-  letter-spacing: 0.1em;
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   color: var(--color-primary);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .timetable-session__row {
@@ -737,8 +740,8 @@ section {
 
 .timetable-session__avatar {
   flex-shrink: 0;
-  width: 56px;
-  height: 56px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   object-fit: cover;
   background: rgba(209, 26, 42, 0.08);
@@ -750,16 +753,19 @@ section {
 
 .timetable-session__title {
   font-family: var(--font-head);
-  font-weight: 700;
-  font-size: 1rem;
-  line-height: 1.5;
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 1.4;
   color: #161616;
 }
 
 .timetable-session__speaker {
-  margin-top: 4px;
-  font-size: 0.8125rem;
-  color: #4d4d4d;
+  margin-top: 8px;
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #161616;
 }
 
 .timetable-session--special {
@@ -769,10 +775,10 @@ section {
 
 .timetable-session__heart {
   position: absolute;
-  top: -6px;
-  right: 16px;
-  width: 28px;
-  height: 28px;
+  top: -10px;
+  right: 20px;
+  width: 32px;
+  height: 32px;
   pointer-events: none;
 }
 
@@ -782,8 +788,8 @@ section {
   color: #4d4d4d;
   font-family: var(--font-head);
   font-weight: 700;
-  font-size: 0.9375rem;
-  padding: 16px 24px;
+  font-size: 1rem;
+  padding: 20px 32px;
 }
 
 /* ---------------------------------------------
@@ -1688,19 +1694,27 @@ section {
     gap: 8px;
   }
   .timetable-row__time {
-    text-align: left;
-    padding-top: 0;
-    font-size: 0.9375rem;
+    padding: 8px 4px 0;
+    font-size: 1.25rem;
   }
   .timetable-session {
-    padding: 16px 18px;
+    padding: 20px 20px;
   }
   .timetable-session__avatar {
-    width: 44px;
-    height: 44px;
+    width: 56px;
+    height: 56px;
   }
   .timetable-session__title {
+    font-size: 1.125rem;
+  }
+  .timetable-session__speaker {
     font-size: 0.9375rem;
+  }
+  .timetable-session__label {
+    font-size: 0.875rem;
+  }
+  .timetable-session--break {
+    padding: 16px 20px;
   }
 
   /* Overview */
