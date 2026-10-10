@@ -709,7 +709,7 @@ section {
   background: #fff;
   border: 1px solid var(--color-border);
   border-radius: 16px;
-  padding: 24px 32px;
+  padding: 16px 26px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
@@ -761,8 +761,13 @@ section {
 }
 
 .timetable-session--special {
-  background: #fdeef0;
+  background: #fff3f4;
   border-color: #f3c7cd;
+}
+
+.timetable-session--special .timetable-session__avatar {
+  width: 100px;
+  height: 100px;
 }
 
 .timetable-session__heart {
@@ -781,7 +786,7 @@ section {
   font-family: var(--font-head);
   font-weight: 700;
   font-size: 1rem;
-  padding: 20px 32px;
+  padding: 16px 26px;
 }
 
 /* ---------------------------------------------
