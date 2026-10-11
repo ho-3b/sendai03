@@ -711,6 +711,7 @@ section {
   border-radius: 16px;
   padding: 16px 26px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
 }
 
 .timetable-session__label {
@@ -772,8 +773,8 @@ section {
 
 .timetable-session__heart {
   position: absolute;
-  top: -40px;
-  right: -15px;
+  top: -20px;
+  right: 0;
   width: 78px;
   height: 78px;
   opacity: 0.6;
