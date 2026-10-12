@@ -805,6 +805,153 @@ section {
   padding: 16px 26px;
 }
 
+.timetable-session--interactive {
+  cursor: pointer;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.timetable-session--interactive:hover,
+.timetable-session--interactive:focus-visible {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+/* ---------------------------------------------
+   Speaker Modal
+--------------------------------------------- */
+.speaker-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.speaker-modal.is-open {
+  display: flex;
+}
+
+.speaker-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.speaker-modal__dialog {
+  position: relative;
+  width: 100%;
+  max-width: 844px;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.speaker-modal__close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  color: #4d4d4d;
+  cursor: pointer;
+  padding: 0;
+}
+
+.speaker-modal__label {
+  font-family: var(--font-label);
+  font-weight: 700;
+  color: var(--color-primary);
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  margin: 0;
+}
+
+.speaker-modal__title {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #161616;
+  padding-right: 40px;
+  margin: 0;
+}
+
+.speaker-modal__body {
+  color: #161616;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.speaker-modal__body p {
+  margin: 0;
+}
+
+.speaker-modal__body p + p {
+  margin-top: 1em;
+}
+
+.speaker-modal__pending {
+  color: #777;
+}
+
+.speaker-modal__footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.speaker-modal__avatar {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.speaker-modal__name {
+  flex: 1;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #161616;
+  margin: 0;
+}
+
+.speaker-modal__links {
+  display: inline-flex;
+  gap: 8px;
+}
+
+.speaker-modal__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: #161616;
+}
+
+.speaker-modal__link:hover {
+  opacity: 0.7;
+}
+
 /* ---------------------------------------------
    Overview / Access
 --------------------------------------------- */
