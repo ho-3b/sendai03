@@ -781,6 +781,20 @@ section {
   pointer-events: none;
 }
 
+.timetable-session__arrow {
+  position: absolute;
+  right: 16px;
+  bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: #fff;
+}
+
 .timetable-session--break {
   background: #f1f1f2;
   border: 0;
