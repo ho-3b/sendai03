@@ -209,7 +209,7 @@
             <div class="timetable-session__row">
               <img class="timetable-session__avatar" src="assets/img/speakers/emorima.png" alt="" aria-hidden="true">
               <div class="timetable-session__body">
-                <h3 class="timetable-session__title">会社は好きじゃなかった。コードは好きだった rubyist.send(:❤️) が社内で通るまで</h3>
+                <h3 class="timetable-session__title">会社は好きじゃなかった。コードは好きだった<br> ― rubyist.send(:❤️) が社内で通るまで</h3>
                 <p class="timetable-session__speaker">江森 真由美</p>
               </div>
             </div>
@@ -631,7 +631,7 @@
   var SPEAKERS = {
     emorima: {
       label: 'SPECIAL SPEAKERS',
-      title: '会社は好きじゃなかった。コードは好きだった rubyist.send(:❤️) が社内で通るまで',
+      title: '会社は好きじゃなかった。コードは好きだった<br>― rubyist.send(:❤️) が社内で通るまで',
       bodyHTML: '<p>社内にコードの話をする仲間は一人もいませんでした。メソッドパラメータにフラグを5つ渡す先輩、飲みに誘うために個人携帯に何度も電話をかけてくる上司…。「早く結婚して辞めてやる」と思いながら、ひとりでコードを書いていたあの頃。Rubyとコミュニティが教えてくれた「共有する楽しさ」を、権限も実績もなかった私がどうやって会社の中に持ち込んだのか。public にしていない話も、仙台Ruby会議03 では send します。</p>',
       name: '江森 真由美',
       avatar: 'assets/img/speakers/emorima.png',
@@ -733,7 +733,7 @@
     } else {
       labelEl.style.display = 'none';
     }
-    titleEl.textContent = data.title;
+    titleEl.innerHTML = data.title;
     bodyEl.innerHTML = data.bodyHTML;
     nameEl.textContent = data.name;
     avatarEl.src = data.avatar;
