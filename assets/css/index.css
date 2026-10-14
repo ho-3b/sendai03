@@ -36,6 +36,7 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -659,6 +660,310 @@ section {
   font-size: 1.125rem;
   line-height: 1.4;
   color: #4d4d4d;
+}
+
+/* ---------------------------------------------
+   Timetable
+--------------------------------------------- */
+.timetable {
+  padding-block: 80px;
+}
+
+#timetable .section-label {
+  font-size: 0.75rem;
+}
+
+#timetable .section-lead {
+  margin-bottom: 48px;
+  font-size: 0.875rem;
+  line-height: 1.8;
+  color: #4d4d4d;
+}
+
+.timetable-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.timetable-row {
+  display: grid;
+  grid-template-columns: 208px 1fr;
+  gap: 0;
+  align-items: center;
+}
+
+.timetable-row__time {
+  padding: 0 26px 0 0;
+  font-family: var(--font-label);
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  color: #161616;
+  white-space: nowrap;
+}
+
+.timetable-session {
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 16px 26px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.timetable-session__label {
+  display: inline-block;
+  font-family: var(--font-label);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.timetable-session__row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.timetable-session__avatar {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: rgba(209, 26, 42, 0.08);
+}
+
+.timetable-session__body {
+  min-width: 0;
+}
+
+.timetable-session__title {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: #161616;
+}
+
+.timetable-session__speaker {
+  margin-top: 8px;
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #161616;
+}
+
+.timetable-session--special {
+  background: #fff3f4;
+  border-color: #f3c7cd;
+}
+
+.timetable-session--special .timetable-session__avatar {
+  width: 100px;
+  height: 100px;
+}
+
+.timetable-session__heart {
+  position: absolute;
+  top: -17px;
+  right: -15px;
+  width: 78px;
+  height: 78px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.timetable-session__arrow {
+  position: absolute;
+  right: 16px;
+  bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: #fff;
+}
+
+.timetable-session--break {
+  background: #f1f1f2;
+  border: 0;
+  color: #4d4d4d;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 16px 26px;
+}
+
+.timetable-session--interactive {
+  cursor: pointer;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.timetable-session--interactive:hover,
+.timetable-session--interactive:focus-visible {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+/* ---------------------------------------------
+   Speaker Modal
+--------------------------------------------- */
+.speaker-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.speaker-modal.is-open {
+  display: flex;
+}
+
+.speaker-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.speaker-modal__dialog {
+  position: relative;
+  width: 100%;
+  max-width: 844px;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.speaker-modal__close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  color: #4d4d4d;
+  cursor: pointer;
+  padding: 0;
+}
+
+.speaker-modal__label {
+  font-family: var(--font-label);
+  font-weight: 700;
+  color: var(--color-primary);
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  margin: 0;
+}
+
+.speaker-modal__title {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #161616;
+  padding-right: 40px;
+  margin: 0;
+}
+
+.speaker-modal__body {
+  color: #161616;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.speaker-modal__body p {
+  margin: 0;
+}
+
+.speaker-modal__body p + p {
+  margin-top: 1em;
+}
+
+.speaker-modal__body a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.speaker-modal__body code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: #f4f4f6;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.speaker-modal__pending {
+  color: #777;
+}
+
+.speaker-modal__footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.speaker-modal__avatar {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.speaker-modal__name {
+  flex: 1;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #161616;
+  margin: 0;
+}
+
+.speaker-modal__links {
+  display: inline-flex;
+  gap: 8px;
+}
+
+.speaker-modal__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: #161616;
+}
+
+.speaker-modal__link:hover {
+  opacity: 0.7;
 }
 
 /* ---------------------------------------------
@@ -1552,6 +1857,38 @@ section {
   }
   .speaker-card__name {
     font-size: 1.5rem;
+  }
+
+  /* Timetable */
+  .timetable {
+    padding-block: 40px 60px;
+  }
+  .timetable-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .timetable-row__time {
+    padding: 8px 4px 0;
+    font-size: 1.25rem;
+  }
+  .timetable-session {
+    padding: 20px 20px;
+  }
+  .timetable-session__avatar {
+    width: 56px;
+    height: 56px;
+  }
+  .timetable-session__title {
+    font-size: 1.125rem;
+  }
+  .timetable-session__speaker {
+    font-size: 0.9375rem;
+  }
+  .timetable-session__label {
+    font-size: 0.875rem;
+  }
+  .timetable-session--break {
+    padding: 16px 20px;
   }
 
   /* Overview */
